@@ -35,4 +35,5 @@ There is banana shape in height and FEV
 lungcap %>% ggplot(aes(Ht,FEV))+
   geom_point()+
   theme_bw()
+summary(lm(FEV~Ht, data =lungcap ))
 ```
