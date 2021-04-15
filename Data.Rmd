@@ -5,7 +5,7 @@ date: "4/15/2021"
 output: html_document
 ---
 
-When we have a trumpet shape Variance it does not 
+When we have a trumpet shape variance it does not 
 ```{r setup, include=FALSE}
 library(knitr)
 knitr::opts_chunk$set(cache = TRUE,warning = FALSE,
@@ -37,3 +37,6 @@ lungcap %>% ggplot(aes(Ht,FEV))+
   theme_bw()
 summary(lm(FEV~Ht, data =lungcap ))
 ```
+Residual standard error: 0.4307 on 652 degrees of freedom
+Multiple R-squared:  0.7537,	Adjusted R-squared:  0.7533 
+F-statistic:  1995 on 1 and 652 DF,  p-value: < 2.2e-16
