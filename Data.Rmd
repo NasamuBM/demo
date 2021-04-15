@@ -5,7 +5,7 @@ date: "4/15/2021"
 output: html_document
 ---
 
-When we have a trumpet shape variance it does not 
+When we have a trumpet shape Variance it does not 
 ```{r setup, include=FALSE}
 library(knitr)
 knitr::opts_chunk$set(cache = TRUE,warning = FALSE,
