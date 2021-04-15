@@ -1,0 +1,38 @@
+---
+title: "Demo"
+author: "NasamuBM"
+date: "4/15/2021"
+output: html_document
+---
+
+When we have a trumpet shape variance it does not 
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(cache = TRUE,warning = FALSE,
+                      message=FALSE,echo=TRUE, dpi=180,
+                      fig.width = 8,fig.height = 5)
+library(tidyverse)
+library(skimr)
+library(GLMsData) # Load the GLMsData package >
+#editor_options:
+  #chunk_output_type: console
+```
+```{r include=FALSE}
+#?lungcap
+data(lungcap)
+  lungcap %>% skim()
+
+lungcap <- lungcap %>% mutate(Smoke=factor(Smoke,
+                   levels=c(0, 1), # The values of Smoke
+                   labels=c("Non-smoker","Smoker")))
+
+lungcap
+
+```
+There is banana shape in height and FEV
+
+```{r}
+lungcap %>% ggplot(aes(Ht,FEV))+
+  geom_point()+
+  theme_bw()
+```
